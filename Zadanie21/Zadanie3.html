@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>
+        Przykład obliczenia długości drabiny i kąta jej oparcia
+    </title>
+    <script language="JavaScript">
+        function Pow_Pawlak(a, b) {
+            a_dana_Paw = parseFloat(a)
+            b_dana_Paw = parseFloat(b)
+            drabina_wynik = Math.sqrt((a_dana_Paw * a_dana_Paw) + (b_dana_Paw * b_dana_Paw))
+            document.getElementsByName('drabina')[0].value = drabina_wynik.toFixed(2);   /* na dokument  */
+            alert("Drabina=" + drabina_wynik.toFixed(2) + " m");                                                  /*do okna Alert */
+            pokaz1.innerHTML = "Drabina=" + drabina_wynik.toFixed(2) + " m" + "<br>";        /* do tabeli */
+        }
+
+        function arcctg(x) { return Math.PI / 2 - Math.atan(x); }
+
+      /*  function Obw_Pawlak(a, b) { 
+            a_dana_Paw = parseFloat(a)
+            b_dana_Paw = parseFloat(b)
+        
+        
+    
+         // w jaki sposob przypisac wartosci a i b do x i y w arccotangensie - która odpowiada której // 
+
+
+            document.getElementsByName('kat')[0].value = obw_wynik.toFixed(2);
+            alert("Kąt=" + obw_wynik.toFixed(2) + " cm");
+            pokaz2.innerHTML = "Kąt=" + obw_wynik.toFixed(2) + "cm";
+        } */
+    </script>
+</head>
+
+<body>
+    Obliczanie długości drabiny i kąta oparcia
+    <br> <br>
+    <form name="formularz" action="..."
+        onsubmit="Pow_Pawlak(this.zmiennaa.value,this.zmiennab.value);Obw_Pawlak(this.zmiennaa.value,this.zmiennab.value);return false">
+        Podaj a=
+        <input size="6" name="zmiennaa">
+        Podaj b=
+        <input size="6" name="zmiennab">
+        <br>
+        <br>
+        <input TYPE="submit" Value="oblicz">
+        <br>
+        <br>
+
+        <input size="6" name="drabina">
+
+        <input size="6" name="kat">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+
+</body>
+
+</html>
