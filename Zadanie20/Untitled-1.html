@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>
+        Przykład obliczenia pola i obwodu trapezu równoramiennego po podaniu górnej i dolnej podstawy oraz wysokosci
+    </title>
+    <script language="JavaScript">
+        function Pow_Pawlak(a, b, h) {
+            a_dana_Paw = parseFloat(a)
+            b_dana_Paw = parseFloat(b)
+            h_dana_Paw = parseFloat(h)
+            Pole_wynik = (a_dana_Paw + b_dana_Paw) * h_dana_Paw / 2
+            document.getElementsByName('pole')[0].value = Pole_wynik.toFixed(2);   /* na dokument  */
+            alert("P=" + Pole_wynik.toFixed(2) + " cm^2");                                                  /*do okna Alert */
+            pokaz1.innerHTML = "P=" + Pole_wynik.toFixed(2) + " cm^2" + "<br>";        /* do tabeli */
+        }
+        function Obw_Pawlak(a, b, c) {
+            a_dana_Paw = parseFloat(a)
+            b_dana_Paw = parseFloat(b)
+            c_dana_Paw = parseFloat(c)
+
+            pitagoras = (b_dana_Paw - a_dana_Paw) / 2
+            c_dana_Paw = Math.sqrt((pitagoras * pitagoras) + (h_dana_Paw * h_dana_Paw))
+
+            obw_wynik = (a_dana_Paw + b_dana_Paw) + 2 * c_dana_Paw
+
+
+
+            document.getElementsByName('obw')[0].value = obw_wynik.toFixed(2);
+            alert("Obw=" + obw_wynik.toFixed(2) + " cm");
+            pokaz2.innerHTML = "Obw=" + obw_wynik.toFixed(2) + "cm";
+        }
+    </script>
+</head>
+
+<body>
+    Obliczanie Pola i obwodu trapezu równoramiennego
+    <br> <br>
+    <form name="formularz" action="..."
+        onsubmit="Pow_Pawlak(this.zmiennaa.value,this.zmiennab.value,this.zmiennah.value);Obw_Pawlak(this.zmiennaa.value,this.zmiennab.value,this.zmiennah.value);return false">
+        Podaj a=
+        <input size="6" name="zmiennaa">
+        Podaj b=
+        <input size="6" name="zmiennab">
+        Podaj h=
+        <input size="6" name="zmiennah">
+        <br>
+        <br>
+        <input TYPE="submit" Value="oblicz">
+        <br>
+        <br>
+
+        <input size="6" name="pole">
+
+        <input size="6" name="obw">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+
+</body>
+
+</html>
