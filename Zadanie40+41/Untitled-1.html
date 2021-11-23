@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function historia() {
+                var h = window.history.length;
+               document.getElementById("historia").innerHTML = +h;
+            }
+            </script>
+
+            <script>
+                function wroc(){
+                    window.history.back()
+                }
+            </script>
+            
+            <script>
+                function idz(){
+                    window.history.forward()
+                }
+            </script>
+    <body>
+    <input type="button" value="Historia" onclick="historia()">
+    <p id="historia"></p>
+    
+    <input type="button" value="Wróć" onclick="wroc">
+    <input type="button" value="Naprzód" onclick="idz">
+
+
+    </body>
+    </html>

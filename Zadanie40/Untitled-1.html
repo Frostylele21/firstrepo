@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function historia() {
+                var h = window.history.length;
+               document.getElementById("historia").innerHTML = +h;
+            }
+            </script>
+
+            <script>
+                function wroc(){
+                    window.history.back()
+                }
+            </script>
+            
+            <script>
+                function idz(){
+                    window.history.forward()
+                }
+            </script>
+
+            <script>
+                function idz_szybko(){
+                    
+                    var ilosc=prompt("Wpisz o ile stron chcesz iść na przód");
+                    if (ilosc!=null&&name!=""){
+                        document.write("Podaj liczbę stron");
+                    }
+                
+                    window.history.go(ilosc)
+                }
+            </script>
+
+            <script>
+                function wroc_szybko(){
+                    window.history.go(-2)
+                }
+            </script>
+
+            <script>
+                function odswiez(){
+                    window.history.go(0)
+                }
+            </script>
+    </head>
+    <body>
+    <input type="button" value="Historia" onclick="historia()">
+    <p id="historia"></p>
+    
+    <input type="button" value="Wróć" onclick="wroc()">
+    <input type="button" value="Naprzód" onclick="idz()">
+    <input type="button" value="Idź naprzód szybko" onclick="idz_szybko()">
+    <input type="button" value="Wróć szybko" onclick="wroc_szybko()">
+    <input type="button" value="Odśwież" onclick="odswiez()">
+
+    </body>
+    </html>

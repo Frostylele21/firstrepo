@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function widac_haslo() {
+                var x = document.getElementById("haslo");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Wpisz hasło do strony:
+        <form action="?" onsubmit="window.location.href = this.password.value + '.html'; return false">
+            <input type="password" name="password" id="haslo" />
+            <input type="submit" value="OK" />
+        </form>
+        <input type="checkbox" onclick="widac_haslo()"> Pokaż hasło
+    </body>
+</html>
