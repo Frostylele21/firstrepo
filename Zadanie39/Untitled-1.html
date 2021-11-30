@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+            <script>
+                function cke1(){
+                   window.location.replace("https://cke.gov.pl");
+                }
+            </script>
+            
+            <script>
+                function gda(){
+                    window.location.replace("https://www.gdansk.pl");
+                }
+            </script>
+
+            <script>
+                function strona(){
+                  window.location.replace("https://www.zse.gda.pl");
+                }
+            </script>
+
+            <script>
+                function strona_odsw(){
+                    window.location.reload()
+                }
+            </script>
+
+            <script>
+                function cke_zmienstrone(){
+                    setTimeout("cke1();",4000);
+                }
+            </script>
+
+            <script>
+                function gda_zmienstrone()
+                {
+                    setTimeout("gda();",6000);
+                }
+            </script>
+
+            <script>
+                function strona_zmienstrone()
+                {
+                    setTimeout("strona();",10000);
+                }
+            </script>
+
+            <script>
+                function strona_odsw_zmienstrone()
+                {
+                    setTimeout("strona_odsw();",8000);
+                }
+            </script>
+    </head>
+    <body>
+    
+    <input type="button" value="Strona CKE" onclick="cke_zmienstrone()">
+    <input type="button" value="Strona Gdańska" onclick="gda_zmienstrone()">
+    <input type="button" value="Strona ucznia" onclick="strona_zmienstrone()">
+    <input type="button" value="Odświeżanie" onclick="strona_odsw_zmienstrone()">
+
+    </body>
+    </html>
