@@ -1,8 +1,9 @@
 <?php
-for ($i; $i<=9;$i++)
-{$tablica[$i] = rand(0,10);
+for ($i=0; $i<=9;$i++)
+{
+    $tablica[$i] = rand(0,10);
 }
-for ($i; $i<=9;$i++)
+for ($i=0; $i<=9;$i++)
 {
 echo $tablica[$i];
 }
