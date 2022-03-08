@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Zadanie nr 48</title>
+  </head>
+  <body>
+   <script type="text/javascript">
+
+    String.prototype.duzaLitera = function() 
+      { return this.charAt(0).toUpperCase() + this.substr(1);} 
+    var tx1 = 'klakson';
+    document.write(tx1.duzaLitera() + "<br>");
+
+    data_cz = new Date();
+    data = new Date(2022,2,08);
+
+    data_cz_new = data_cz.toString();
+    data_new = data.toString();
+
+    document.write("Aktualna data to: " + data_cz_new + "<br>");
+    document.write("Podana w kodzie data to: " + data_new + "<br>");
+    </script>
+</body>
+</html>
