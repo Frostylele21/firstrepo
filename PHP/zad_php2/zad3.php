@@ -11,7 +11,7 @@
 <?php
 if(isset($_GET['podatki']) && ($_GET['liczba1']))
 {
-$typ = intval($_GET['podatki']);
+(int) $typ = $_GET['podatki'];
 $kwota = $_GET['liczba1'];
 $podatek = $kwota - (($kwota / 100)*$typ);
 echo "Dla podanej kwoty podatek wynosi: ".$podatek;
